@@ -17,7 +17,7 @@ app.use("/book", bookRouter)
 
 app.get("/" , (req,res) => {
     res.send({
-        message:"Hello Server";
+        message:"Hello Server"
     })
 } )
 const port = process.env.PORT || 4000;
