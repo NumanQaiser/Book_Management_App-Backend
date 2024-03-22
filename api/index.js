@@ -10,7 +10,7 @@ require("../Configuration/DB")
 
 
 app.use(cors({
-    origin :["https://book-management-app-frontend.vercel.app/"],
+    origin :["https://book-management-app-frontend.vercel.app"],
     methods:[ "POST" , "GET" , "PUT", "DELETE " ],
     credentials:true 
 }));
