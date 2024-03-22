@@ -9,7 +9,11 @@ const bookRouter = require("../Routes/BookRoute");
 require("../Configuration/DB")
 
 
-app.use(cors());
+app.use(cors({
+    origin :"https://book-management-app-frontend.vercel.app/",
+    methods:[ "POST" , "GET" , "PUT", "DELETE " ],
+    credentials:true 
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true, limit: 1000, parameterLimit: 1000 }));
 app.use("/user", userRouter)
