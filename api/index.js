@@ -15,6 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true, limit: 1000, parameterLimit: 100
 app.use("/user", userRouter)
 app.use("/book", bookRouter)
 
+app.get("/" , (req,res) => {
+    res.send({
+        message:"Hello Server";
+    })
+} )
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
